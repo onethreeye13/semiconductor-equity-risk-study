@@ -1,0 +1,130 @@
+{
+  "experiment_id": "ML001",
+  "run_at_utc": "2026-10-08T00:49:55.875650+00:00",
+  "status": "retrospective; historical prices were already reviewed in V1",
+  "config": {
+    "protocol_version": "ml-v1.0",
+    "protocol_date_utc": "2026-10-08",
+    "experiment_id": "ML001",
+    "ticker": "MU",
+    "benchmark": "SOXX",
+    "training_start": "2020-01-02",
+    "validation_start": "2023-01-03",
+    "test_start": "2024-01-02",
+    "end_exclusive": "2026-10-01",
+    "horizon_sessions": 1,
+    "target": "adj_open[t+2] / adj_open[t+1] - 1 > 0",
+    "features": [
+      "return_1",
+      "return_2",
+      "return_5",
+      "momentum_20",
+      "rsi_14",
+      "volatility_20",
+      "ma_distance_20",
+      "ma_distance_50",
+      "volume_change_1"
+    ],
+    "probability_threshold": 0.5,
+    "threshold_rule": "strictly_greater_than",
+    "logistic_regression": {
+      "C": 1.0,
+      "solver": "lbfgs",
+      "max_iter": 2000,
+      "random_state": 42
+    },
+    "random_forest": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "min_samples_leaf": 25,
+      "max_features": "sqrt",
+      "bootstrap": true,
+      "random_state": 42,
+      "n_jobs": 1
+    },
+    "one_way_cost_bps": 10,
+    "cost_sensitivity_bps": [
+      0,
+      10,
+      25
+    ],
+    "annualization_sessions": 252,
+    "cash_return_annual": 0.0,
+    "sharpe_reference_rate_annual": 0.0,
+    "tuning": "none; retain both models regardless of validation or test performance",
+    "final_refit": "all eligible pre-test training labels; no fitting during the test block",
+    "holdings": "long or cash from next open to following open; consecutive long signals keep the position",
+    "terminal_exit": "last label-end open",
+    "status": "retrospective; historical prices were already reviewed in V1"
+  },
+  "protocol_lock": {
+    "experiment_id": "ML001",
+    "frozen_before_first_model_fit_utc": "2026-10-08T00:39:58.935038+00:00",
+    "sha256": {
+      "config_ml.json": "1c073fc641735044a71fb6ed551b8c423a6235ff4c222f6f4c40c7e96d6d71fc",
+      "docs/ml_protocol.md": "ce4f9aa22ff4bd01ee9ae3deeb15fe9b2918c648b03cfebf27341b0016f7ca54"
+    },
+    "note": "Local workflow record, not external preregistration; history already inspected in V1."
+  },
+  "source_sha256": {
+    "config.json": "62640fa174a40bcc0295928bdee988d0f867de17f2ab03f74d6ffc9c113ce4fa",
+    "config_ml.json": "1c073fc641735044a71fb6ed551b8c423a6235ff4c222f6f4c40c7e96d6d71fc",
+    "docs/ml_protocol.md": "ce4f9aa22ff4bd01ee9ae3deeb15fe9b2918c648b03cfebf27341b0016f7ca54",
+    "src/ml.py": "8a88797205ff6614a922dae24b7f53d22be21cf7ff0a363c30623ea2fbf9b2c9",
+    "src/ml_pipeline.py": "4db5966b4d30bc7ae43b4d495292822dd71081f4ee1a2737dcb627e76084fa73",
+    "src/ml_plots.py": "5273ac6de97775fab474c3790975714ff8eb0611d338d2a015bb021f976d7fa8",
+    "src/data.py": "69995125c825fb2c4987b5c02959c48702cd97c2ffff50ae10ed6ed7d63ea9de",
+    "src/indicators.py": "0d43e1a3d080a8cd59523293f112427739b105b3f77452cb03fe63abae432ecd",
+    "src/backtest.py": "0a11c727043fd4108ba27a450ab84fdba5e2fede4d75f59134d939e64d561a48",
+    "src/metrics.py": "da9c7c24ab7c0618329628f0d237e4779631c1a2c54293f09fa66398d013cd88",
+    "requirements.txt": "942baf14f6c90318979928a0692205f599d2a5cf3a5ba8b1aee4c540aa3f4a17"
+  },
+  "data_manifest_sha256": "6ecfd12ec7069d815bfa3eb331d9a20dc83f6fd5c5c5b111ca7fba8f3bf02f99",
+  "input_sha256": {
+    "data/raw/MU.csv": "e0f8ae496de7a84b419e7c3649a515b139ee2775b36028f0bc714cc05ee1f0bf",
+    "data/processed/MU.csv": "9605796506958931b8c2971750743416400b23cb11c8e73134f862626732ca9a",
+    "data/raw/MU.json": "1a513d911a61ef146805f8b91e0598d87eb3933bf853b7a21d4607047c58b83e",
+    "data/raw/SNDK.csv": "b52c9f305ba91a7475628f0a48105075445a00e2d48017bd1fb3a10b2ec85e26",
+    "data/processed/SNDK.csv": "c3c90c546729e01ddd4e67f5ae440f34a9cf50d14c4d7a9525b4b1fad31e5f01",
+    "data/raw/SNDK.json": "2e5841c24bcc8ed1fb0024873e925e74f7f46b5f0410d5182d4784ed988c98a4",
+    "data/raw/SOXX.csv": "f7abdd2a977db4a66b4e55f94e6c543d81fae9cda5e29222f68f76ee599b80d5",
+    "data/processed/SOXX.csv": "bdb93f0baf851c0ff56c05c4e802699a179dddc40850791a00ad044eb0602572",
+    "data/raw/SOXX.json": "7fbde1f83d31214848ff933ec0ab4123d2fb4a1ed1db2cc18ce1f898787cd974"
+  },
+  "data_downloaded_at_utc": "2026-10-02T01:14:48.319089+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "scikit_learn": "1.8.0",
+    "scipy": "1.17.0",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8"
+  },
+  "output_sha256": {
+    "figures/ml_classification.svg": "5fe415de835f27b221e19d464744772f63957850af3a6b47d28306a2f5b01d5e",
+    "figures/ml_equity_drawdown.svg": "c3c7945f851e3ee0dfd40b46f758ec137c127b647eb06cf1a4a761ec99eef424",
+    "reports/ml/classification_metrics.csv": "bb16b37af0382d4e2b1cecdb790bbfc2b9c2f7b9a80c5e49f741a6af3a22b0ff",
+    "reports/ml/cost_sensitivity.csv": "b3513f98b72306d6000bf0b705d1b48dec39c668b75be2f0b29e2d32ea5f5d37",
+    "reports/ml/daily_results.csv": "0cdd138aa4d439fc5b5e07cce0ee9b12e5a4143f32aae359d4735c959d589331",
+    "reports/ml/findings.md": "25343b50990550578073d510bb60d95dac2d8b848524445f866afa29a867be05",
+    "reports/ml/fit_audit.csv": "17e35e6fe14c48abb37b42e546f3f2aa3359b35313f75377214b9331b75d2bfa",
+    "reports/ml/fit_details.json": "8f732650286772a91154c0a223642b200e569a0dc69fff9fdb18afe914203da3",
+    "reports/ml/predictions.csv": "dab18cf38264381e2448801da851e3b6fbcda8fb8428bf8030968af216fc71dd",
+    "reports/ml/purged_rows.csv": "c6f0bf5ba225cfb8256b1d79f79ec65722fb2e51ce4d715741ac7b3a6f0fdd58",
+    "reports/ml/split_audit.csv": "3720ddc123e45df60c20b2a4af2656bbe79f928a18d332ef701427c56d153413",
+    "reports/ml/trades.csv": "46b6307727d4b837005443a4f4068253d7581203da6c6896d72c7a8c416d07c7",
+    "reports/ml/trading_metrics.csv": "2c189d32e7b6d678390bf412615f621fa4bb87f81f2e0c869e1fdc88119d5b85",
+    "reports/ml/yearly_account_returns.csv": "c27340b80a91fbc853946f297f98e098e5386d9e9b4e05ca4548e08a770a544f",
+    "reports/ml/yearly_classification.csv": "73f61d0018060fac906824124d0452e3094f1225bc45d2fd171d99de1537d07b"
+  },
+  "experiment_log": [
+    {
+      "id": "ML001",
+      "parameter_variants": 1,
+      "model_families": 2,
+      "test_used_for_selection": false,
+      "history_previously_viewed": true,
+      "note": "Fixed design; validation diagnostic, deterministic pre-test refit. Both models reported."
+    }
+  ]
+}

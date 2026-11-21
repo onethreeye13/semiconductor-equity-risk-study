@@ -1,0 +1,24 @@
+{
+  "protocol_version": "sndk-inverse-v1.1",
+  "protocol_date": "2026-10-02",
+  "underlying": "SNDK",
+  "etfs": ["SNDQ", "SNXX"],
+  "download_end_exclusive": "2026-10-01",
+  "listing_floors": {"SNDQ": "2026-04-22", "SNXX": "2026-01-26"},
+  "test_start": "2026-08-03",
+  "features": {
+    "momentum_5": [0.05, 0.10, 0.20],
+    "ma_distance_20": [0.05, 0.10, 0.20],
+    "rsi_14": [70, 80, 90],
+    "zscore_20": [1.5, 2.0, 2.5]
+  },
+  "holding_sessions": [1, 3, 5],
+  "one_way_cost_bps": 10,
+  "cost_sensitivity_bps": [0, 10, 25, 50],
+  "minimum_train_trades": 20,
+  "minimum_test_trades": 10,
+  "selection_metric": "mean_net_return",
+  "bootstrap_repetitions": 2000,
+  "bootstrap_block_sessions": 5,
+  "random_seed": 20261002
+}

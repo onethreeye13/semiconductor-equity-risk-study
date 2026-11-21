@@ -1,0 +1,9 @@
+feature_date,entry_date,label_end_date,reason,block
+2022-12-29,2022-12-30,2023-01-03,label_reaches_next_block,train
+2022-12-30,2023-01-03,2023-01-04,label_reaches_next_block,train
+2023-12-28,2023-12-29,2024-01-02,label_reaches_next_block,validation
+2023-12-29,2024-01-02,2024-01-03,label_reaches_next_block,validation
+2023-12-28,2023-12-29,2024-01-02,label_reaches_next_block,refit
+2023-12-29,2024-01-02,2024-01-03,label_reaches_next_block,refit
+2026-09-29,2026-09-30,,incomplete_future_label,test
+2026-09-30,,,incomplete_future_label,test

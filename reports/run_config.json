@@ -1,0 +1,54 @@
+{
+  "config": {
+    "protocol_version": "v1.0",
+    "protocol_date": "2026-10-01",
+    "tickers": [
+      "MU",
+      "SNDK",
+      "SOXX"
+    ],
+    "benchmark": "SOXX",
+    "download_start": "2019-01-01",
+    "download_end_exclusive": "2026-10-01",
+    "listing_floors": {
+      "SNDK": "2025-02-24"
+    },
+    "long_window": {
+      "start": "2020-01-02",
+      "end_exclusive": "2026-10-01",
+      "tickers": [
+        "MU",
+        "SOXX"
+      ]
+    },
+    "common_window": {
+      "start": "2025-06-02",
+      "end_exclusive": "2026-10-01",
+      "tickers": [
+        "MU",
+        "SNDK",
+        "SOXX"
+      ]
+    },
+    "historical_test_start": "2024-01-02",
+    "sma_fast": 20,
+    "sma_slow": 50,
+    "momentum_days": 20,
+    "rsi_days": 14,
+    "volatility_days": 20,
+    "annualization_sessions": 252,
+    "one_way_cost_bps": 10,
+    "cost_sensitivity_bps": [
+      0,
+      10,
+      25
+    ],
+    "cash_return_annual": 0.0,
+    "sharpe_reference_rate_annual": 0.0,
+    "liquidate_at_end": true
+  },
+  "config_sha256": "62640fa174a40bcc0295928bdee988d0f867de17f2ab03f74d6ffc9c113ce4fa",
+  "data_manifest_sha256": "6ecfd12ec7069d815bfa3eb331d9a20dc83f6fd5c5c5b111ca7fba8f3bf02f99",
+  "status": "retrospective_exploratory",
+  "ml_implemented": false
+}

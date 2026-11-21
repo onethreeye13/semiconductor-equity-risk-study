@@ -1,0 +1,9 @@
+{
+  "experiment_id": "ML001",
+  "frozen_before_first_model_fit_utc": "2026-10-08T00:39:58.935038+00:00",
+  "sha256": {
+    "config_ml.json": "1c073fc641735044a71fb6ed551b8c423a6235ff4c222f6f4c40c7e96d6d71fc",
+    "docs/ml_protocol.md": "ce4f9aa22ff4bd01ee9ae3deeb15fe9b2918c648b03cfebf27341b0016f7ca54"
+  },
+  "note": "Local workflow record, not external preregistration; history already inspected in V1."
+}

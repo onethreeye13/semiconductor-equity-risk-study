@@ -1,0 +1,42 @@
+{
+  "snapshot_id": "20261002T160925968110Z_53b828357721",
+  "downloaded_at_utc": "2026-10-02T16:09:25.968110+00:00",
+  "provider": "Yahoo Finance public chart endpoint (unofficial)",
+  "request": {
+    "etfs": [
+      "SNDQ",
+      "SNXX"
+    ],
+    "listing_floors": {
+      "SNDQ": "2026-04-22",
+      "SNXX": "2026-01-26"
+    },
+    "download_end_exclusive": "2026-10-01"
+  },
+  "baseline_sha256": {
+    "data/processed/SNDK.csv": "c3c90c546729e01ddd4e67f5ae440f34a9cf50d14c4d7a9525b4b1fad31e5f01",
+    "data/processed/SOXX.csv": "bdb93f0baf851c0ff56c05c4e802699a179dddc40850791a00ad044eb0602572"
+  },
+  "sha256": {
+    "SNDQ.json": "be0f4c2985b24360be813366ff3ffb876fd94c27d136d1ae25c6673a1b14e896",
+    "SNDQ.csv": "ace19d223cf0058831132a5defd18559a7aecd3f078e2890f771a96d3395c6b8",
+    "SNXX.json": "53a39660595a32a2cba5cd2f1f21327db1aeafdfeb40b1cd47e56e0ca209af74",
+    "SNXX.csv": "7f6a8d3ec20f72f4c8663847a03a766bac075816070c3a1e78841312556f9276"
+  },
+  "manifest_sha256": "6bceb20ba3f07b8ea363f369ad3866fa16919b71e250476c4119cae7d80f0238",
+  "run_at_utc": "2026-10-02T16:30:08.576377+00:00",
+  "protocol_sha256": "c539e7a631860d017c6f6675e67cc66c5dfe01407f510e6eda2c1f17e13bdb0a",
+  "packages": {
+    "python": "3.12.14",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8"
+  },
+  "code_sha256": {
+    "src/sndk_inverse.py": "1dd719149c43ed148fd1cf1b3d8fab5101f0cd184937f5cdbcf8544595e03fe9",
+    "src/sndk_inverse_data.py": "b2e019ee7c1c2ea8e74c986aa743a17be9a5ecc1640dd0e93f73edbda9dc8d36",
+    "src/sndk_inverse_pipeline.py": "5761aa7c66e2e942e804bb85303f1ca3c1e5269da8c8ab3285d14506d6dd2342",
+    "src/data.py": "69995125c825fb2c4987b5c02959c48702cd97c2ffff50ae10ed6ed7d63ea9de",
+    "src/indicators.py": "0d43e1a3d080a8cd59523293f112427739b105b3f77452cb03fe63abae432ecd"
+  }
+}

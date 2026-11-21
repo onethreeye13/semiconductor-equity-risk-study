@@ -1,0 +1,27 @@
+{
+  "mean_net_return": {
+    "rule_id": "momentum_5_ge_0.05",
+    "holding_sessions": 1,
+    "training_trades": 37,
+    "training_value": 0.010640554097381677
+  },
+  "win_rate": {
+    "rule_id": "momentum_5_ge_0.1",
+    "holding_sessions": 1,
+    "training_trades": 25,
+    "training_value": 0.64
+  },
+  "payoff_ratio": {
+    "rule_id": "momentum_5_ge_0.05",
+    "holding_sessions": 1,
+    "training_trades": 37,
+    "training_value": 0.7707976703751354
+  },
+  "selected": {
+    "rule_id": "momentum_5_ge_0.05",
+    "holding_sessions": 1,
+    "training_trades": 37,
+    "training_value": 0.010640554097381677
+  },
+  "eligible_candidates": 5
+}
